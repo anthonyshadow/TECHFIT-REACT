@@ -6,10 +6,8 @@ import axios from 'axios'
 
 const AccordianWorkout = (props, user) => {
 
-  console.log("AAAAAAAA", user)
 
   const handleDeleteWorkout = (itemId) => {
-    console.log("item", itemId)
   axios({
     method: "delete", 
     url: `/api/user-workouts/${user.userId}`,
@@ -22,14 +20,6 @@ const AccordianWorkout = (props, user) => {
 
   const [modalShow, setModalShow] = React.useState(false);
   
-    const workout = {
-      id: props.id,
-      name: props.name,
-      difficulty: props.difficulty,
-      workout_description: props.workout_description,
-      image_url: props.image_url,
-      video_url: props.video_url
-    };
 
     function MyVerticallyCenteredModal(props) {
       return (

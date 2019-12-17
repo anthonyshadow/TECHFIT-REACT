@@ -19,16 +19,15 @@ const MealPlanSection = ({ user, dispatch, mealList }) => {
     setSelectedMeals([])
     setCounter(0)
   }
-  //+++++++++++
+
   const addSelectedMeal = meal => {
     setSelectedMeals([...selectedMeals, meal]);
     handleMealCount();
     console.log("Selected Meals", selectedMeals);
   };
-  //+++++++++++
+
   const handleRecipeSend = e => {
     console.log("hhh", selectedMeals);
-    //e.preventDefault();
     const postData = {
       userId: user.id,
       recipeTitle: selectedMeals[0].recipe_title,
@@ -67,7 +66,7 @@ const MealPlanSection = ({ user, dispatch, mealList }) => {
     setSelectedMeals([]);
     setCounter(0);
   };
-  //+++++++++++++++++++++
+
   const [query, setQuery] = useState("");
   const getInfo = () => {
     console.log("getInfo");
@@ -82,7 +81,7 @@ const MealPlanSection = ({ user, dispatch, mealList }) => {
             )
           );
         }
-        console.log("success");
+
         console.log(response);
         return Promise.all(promises);
       })
@@ -102,11 +101,8 @@ const MealPlanSection = ({ user, dispatch, mealList }) => {
   };
   const resetForm = () => {
     setQuery("");
-    // clearMealListDisplay()
   };
-  // const clearMealListDisplay = () => {
-  //   dispatch({ type: SET_MEAL_LIST, mealList: [] })
-  // }
+
   return (
     <Row style={rowStyle} className=" p-4">
       <Col

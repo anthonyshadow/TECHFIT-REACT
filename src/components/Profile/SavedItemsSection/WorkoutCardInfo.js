@@ -5,15 +5,6 @@ const WorkoutCardInfo = props => {
     
   const [modalShow, setModalShow] = React.useState(false);
 
-  const workout = {
-    id: props.id,
-    name: props.name,
-    difficulty: props.difficulty,
-    workout_description: props.workout_description,
-    image_url: props.image_url,
-    video_url: props.video_url
-  };
-
   function MyVerticallyCenteredModal(props) {
     return (
       <Modal

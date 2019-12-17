@@ -4,13 +4,10 @@ import { Row, Col, Button, Form } from "react-bootstrap";
 import axios from 'axios'
 export default () => {
  
-  // const [login, setLogin] = useState(false);
   
   
 
   const [msg, setMsg] = useState("");
-
-  console.log("MESSAGE", msg)
 
 const [form, setValues] = useState({
   first_name: '',
@@ -54,23 +51,13 @@ const handleLogin = e => {
     .post("/api/users", postData, axiosConfig)
     .then(res => {
       setMsg(res.data.message);
-      // localStorage.setItem('token', res.data.token);
       resetForm();
-      // setLogin(true);
     })
     .catch(err => {
-      // setMsg(err);
       console.log("AXIOS ERROR:", err);
     });
 };
  
-// console.log("login", login)
-  
-  // const printValues = e => {
-  //   e.preventDefault();
-  //   console.log(form.first_name,form.last_name,form.email, form.password);
-  //   resetForm()
-  // };
 
   return (
     <Fragment>
