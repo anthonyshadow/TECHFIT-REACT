@@ -120,15 +120,6 @@ export default function LiquidBar({ user }) {
         {/* LINE GRAPH WITH DEFAULT DATA */}
         <VictoryLine />
 
-        {/* STACKED BAR CHART */}
- 
-        {/* <VictoryStack>
-          {generateBar('water')}
-          {generateBar('coffee')}
-          {generateBar('soda')}
-          {generateBar('other')}
-        </VictoryStack> */}
-
       </VictoryChart>
     </Fragment>
   )

@@ -9,11 +9,6 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const API_URL = `https://api.spoonacular.com/recipes/findByIngredients`;
 const rowStyle = { minHeight: "60vh", marginTop: "50px" };
 const MealPlanSection = ({ user, dispatch, mealList }) => {
-  console.log(">>>>>>>>", user);
-  if (user) {
-    console.log("userid", user.id);
-  }
-  console.log("User from meal plan:", user);
   const [counter, setCounter] = useState(0);
   const handleMealCount = () => {
     setCounter(counter + 1);

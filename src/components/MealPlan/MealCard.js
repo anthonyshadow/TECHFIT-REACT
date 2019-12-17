@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Modal, Button,Badge } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import ModalCard from '../MealPlan/ModalAddMealPopUp'
 const MealCard = props => {
   
@@ -16,9 +16,7 @@ const MealCard = props => {
     };
     props.addSelectedMeal(meal);
   };
-  //modal
-  
-  //------
+
   return (
      <div>
       <Row className='border rounded p-2 mt-3 mb-3 ' >
@@ -49,15 +47,6 @@ const MealCard = props => {
               <i className="fas fa-users"></i> : {props.servings} servings
             </span>
             < ModalCard handleRecipeSend={props.handleRecipeSend} resetMealList={props.resetMealList} handleClickCard={handleClickCard} />
-            {/* <Button
-              onClick={handleClickCard}
-              variant="info"
-              size="sm"
-              type="submit"
-              disabled ={!active}
-            >
-              Add <i className="far fa-plus-square"></i>
-            </Button> */}
           </div>
           <a
             href={props.url}

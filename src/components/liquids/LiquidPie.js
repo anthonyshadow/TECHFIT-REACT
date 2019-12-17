@@ -49,4 +49,4 @@ export default function LiquidPie(props) {
   )
 }
 
-// colorScale={['cyan', 'tan', 'tomato', 'orange']}
+

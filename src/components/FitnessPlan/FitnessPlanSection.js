@@ -4,7 +4,7 @@ import { Row, Col, Button, Badge } from "react-bootstrap";
 import FitnessCard from '../FitnessPlan/FitnessCard'
 import "bootstrap/dist/css/bootstrap.min.css";
 import {SET_USERWORKOUT_LIST} from "../../reducers/appReducer";
-const FitnessPlanSection = ({user, dispatch, workoutList, userWorkoutList}) => {
+const FitnessPlanSection = ({user, dispatch, workoutList}) => {
   const rowStyle = { minHeight: "300px", margin: "50px 0px" };
   const [selectedWorkouts, setSelectedWorkouts] = useState([]);
   // const [loadingWorkouts, setLoadingWorkouts] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Row, Col, Button, Form } from "react-bootstrap";
-import {SET_LOGIN, SET_USER, SET_USER_LOADING} from '../../reducers/appReducer'
+import {SET_LOGIN} from '../../reducers/appReducer'
 import axios from 'axios'
 
 
